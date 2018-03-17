@@ -1,0 +1,79 @@
+
+set ignorecase
+set smartcase
+
+set smartindent
+set autoindent
+
+set wrapscan " 終端まで検索したら先頭に戻る
+
+""""""""""""""""""""""""""""""
+" ショートカットキー
+""""""""""""""""""""""""""""""
+
+" nnoremap <C-u> 20<Up>
+" nnoremap <C-d> 20<Down>
+
+" nnoremap <C-y> 1<Up>
+" nnoremap <C-e> 1<Down>
+
+noremap  <C-c> <C-[>
+noremap! <C-c> <C-[>
+
+nmap <CR> <Up>o<ESC><Down>
+
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+"""""""""""
+" esc escで二回押すことでハイライトを消す。
+""""""""""
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+
+""""""""""""""""""""""""""""""
+" 最後のカーソル位置を復元する
+""""""""""""""""""""""""""""""
+if has("autocmd")
+ autocmd BufReadPost *
+  if line("'\"") > 0 && line ("'\"") <= line("$") |
+    exe "normal! g'\"" |
+  endif
+endif
+
+" 各種オプションの設定
+set hlsearch
+
+" カーソルを行頭、行末で止まらないようにする
+" vrapperrcではInsertモードのときのみ有効にできる
+set whichwrap=b,s,h,l,<,>,[,],~
+
+" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set smartindent
+" タブ文字の表示幅
+set tabstop=4
+" Vimが挿入するインデントの幅
+set shiftwidth=4
+" 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
+set smarttab
+
+vnoremap = :Format<CR>
+
+
+""""""""""""""""""""""""""""""
+" Eclipse専用
+""""""""""""""""""""""""""""""
+"srで参照をプロジェクトから検索
+eclipseaction SearchRef org.eclipse.jdt.ui.edit.text.java.search.references.in.project
+noremap sr :SearchRef<C-m>
+
+"最後に編集された位置に移動
+eclipseaction GoLastEditPosition org.eclipse.ui.edit.text.gotoLastEditPosition
+nnoremap gb :GoLastEditPosition<C-m>
+
+
+
+
+
