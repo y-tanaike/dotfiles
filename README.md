@@ -12,6 +12,5 @@
 ■ZSH Zsh + Prezto 環境を構築
 参考 :  https://dev.classmethod.jp/tool/zsh-prezto/
 
-===================================
 ■git-completionの設定
 参考 :  https://www.yoheim.net/blog.php?q=20140307
