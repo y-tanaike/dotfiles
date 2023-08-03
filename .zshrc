@@ -29,3 +29,12 @@ source '/Users/tanaike/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/tanaike/google-cloud-sdk/completion.zsh.inc'
+
+
+export GOOGLE_APPLICATION_CREDENTIALS='/Users/yuki.tanaike/UserApp-Prod-f1c66041519c.json'
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+

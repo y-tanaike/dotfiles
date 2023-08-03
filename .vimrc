@@ -1,11 +1,13 @@
+
+
+
 " Color Scheme
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
 
 " 検索結果のハイライトをEsc連打でクリアする
-nnoremap <ESC><ESC> :nohlsearch<CR>
+nnoremap :nohlsearch
 
 set autoindent
 set number
@@ -17,6 +19,7 @@ set nocp
 set ml
 
 set bg=dark
+set transparency=10 
 
 set nu
 
