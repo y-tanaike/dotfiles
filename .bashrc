@@ -10,10 +10,10 @@ alias l='ls -CF'
 alias h='history'
 
 # for NodeJS
-export NVM_DIR="/Users/tanaike/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export GOOGLE_APPLICATION_CREDENTIALS='/Users/yuki.tanaike/UserApp-Prod-f1c66041519c.json'
+#export GOOGLE_APPLICATION_CREDENTIALS='/Users/yuki.tanaike/UserApp-Prod-f1c66041519c.json'
 
 # JAVA 8 
 export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
